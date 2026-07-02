@@ -1,0 +1,588 @@
+/* ============================================
+   图书馆借还系统 - 主样式表
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== 顶部导航 ===== */
+.navbar {
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: white;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar .brand {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .brand .icon {
+    font-size: 26px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.navbar .nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.navbar .nav-links a.active {
+    background: rgba(255,255,255,0.3);
+}
+
+.navbar .nav-links .user-info {
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+}
+
+.navbar .nav-links .btn-logout {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+}
+
+/* ===== 主容器 ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* ===== 登录/注册页 ===== */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-box {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 420px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.auth-box h2 {
+    text-align: center;
+    color: #1a73e8;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.auth-box .subtitle {
+    text-align: center;
+    color: #999;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.auth-box .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.auth-box input[type="text"],
+.auth-box input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.auth-box input:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.1);
+}
+
+.auth-box .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-top: 10px;
+}
+
+.auth-box .btn-submit:hover {
+    opacity: 0.9;
+}
+
+.auth-box .switch-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.auth-box .switch-link a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.auth-box .switch-link a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    background: #fff2f0;
+    color: #ff4d4f;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ffccc7;
+    font-size: 14px;
+}
+
+.success-msg {
+    background: #f6ffed;
+    color: #52c41a;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #b7eb8f;
+    font-size: 14px;
+}
+
+/* ===== 搜索栏 ===== */
+.search-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.search-bar input:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.1);
+}
+
+.search-bar button {
+    padding: 12px 28px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #1557b0;
+}
+
+/* ===== 提示消息 ===== */
+.toast-msg {
+    background: #e6f7ff;
+    color: #1890ff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #91d5ff;
+    font-size: 14px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 图书卡片 ===== */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.book-card .book-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.book-card .book-meta {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.book-card .book-meta span {
+    margin-right: 16px;
+}
+
+.book-card .book-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    flex: 1;
+    margin: 12px 0;
+}
+
+.book-card .book-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.book-card .copies {
+    font-size: 13px;
+    color: #666;
+}
+
+.book-card .copies .available {
+    color: #52c41a;
+    font-weight: bold;
+}
+
+.book-card .copies .unavailable {
+    color: #ff4d4f;
+    font-weight: bold;
+}
+
+.book-card .btn-borrow {
+    padding: 8px 20px;
+    background: #52c41a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.book-card .btn-borrow:hover {
+    background: #389e0d;
+}
+
+.book-card .btn-borrow.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* ===== 表格样式 ===== */
+.table-container {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    background: #fafafa;
+}
+
+table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 14px;
+    color: #333;
+}
+
+table tbody tr:hover {
+    background: #fafafa;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-borrowed {
+    background: #fff7e6;
+    color: #fa8c16;
+}
+
+.status-returned {
+    background: #f6ffed;
+    color: #52c41a;
+}
+
+.status-overdue {
+    background: #fff2f0;
+    color: #ff4d4f;
+}
+
+/* ===== 按钮样式 ===== */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-primary {
+    background: #1a73e8;
+    color: white;
+}
+
+.btn-success {
+    background: #52c41a;
+    color: white;
+}
+
+.btn-danger {
+    background: #ff4d4f;
+    color: white;
+}
+
+.btn-warning {
+    background: #faad14;
+    color: white;
+}
+
+.btn-sm {
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* ===== 模态框 ===== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-box h3 {
+    margin-bottom: 20px;
+    color: #1a73e8;
+    font-size: 18px;
+}
+
+.modal-box .form-group {
+    margin-bottom: 16px;
+}
+
+.modal-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 13px;
+}
+
+.modal-box input[type="text"],
+.modal-box input[type="number"],
+.modal-box textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-box textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-box input:focus,
+.modal-box textarea:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+.modal-box .btn-row {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* ===== 页脚 ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 13px;
+}
+
+/* ===== 统计卡片 ===== */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.stat-card .stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.stat-card .stat-label {
+    font-size: 13px;
+    color: #999;
+    margin-top: 4px;
+}
+
+/* ===== 页面标题 ===== */
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-header h2 {
+    font-size: 22px;
+    color: #1a1a1a;
+}
+
+.page-header p {
+    color: #999;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 12px;
+    }
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar {
+        padding: 0 12px;
+    }
+    .navbar .nav-links {
+        gap: 8px;
+    }
+    .navbar .nav-links a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,17 @@
+com\library\servlet\LogoutServlet.class
+com\library\servlet\AdminBorrowsServlet.class
+com\library\servlet\IndexServlet.class
+com\library\servlet\RegisterServlet.class
+com\library\dao\BookDao.class
+com\library\servlet\BorrowServlet.class
+com\library\servlet\ReturnServlet.class
+com\library\servlet\SearchBookServlet.class
+com\library\model\BorrowRecord.class
+com\library\dao\UserDao.class
+com\library\model\Book.class
+com\library\servlet\MyBorrowsServlet.class
+com\library\model\User.class
+com\library\servlet\LoginServlet.class
+com\library\util\DBUtil.class
+com\library\dao\BorrowDao.class
+com\library\servlet\AdminBookServlet.class
