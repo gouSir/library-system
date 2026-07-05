@@ -1,4 +1,4 @@
-# 图书馆借还系统 — JavaWeb期末作业
+# 图书馆借还系统 
 
 ## 项目说明
 基于 Java Servlet + JSP + MySQL 的图书借阅归还管理系统。
